@@ -16,9 +16,9 @@ public class Database {
         buns.add(new Bun(Constants.WHITE_BUN, 200));
         buns.add(new Bun(Constants.RED_BUN, 300));
 
-        ingredients.add(new Ingredient(IngredientType.SAUCE, "hot sauce", 100));
-        ingredients.add(new Ingredient(IngredientType.SAUCE, "sour cream", 200));
-        ingredients.add(new Ingredient(IngredientType.SAUCE, "chili sauce", 300));
+        ingredients.add(new Ingredient(IngredientType.SAUCE, Constants.HOT_SAUCE, 100));
+        ingredients.add(new Ingredient(IngredientType.SAUCE, Constants.SOUR_CREAM, 200));
+        ingredients.add(new Ingredient(IngredientType.SAUCE, Constants.CHILI_SAUCE, 300));
 
         ingredients.add(new Ingredient(IngredientType.FILLING, "cutlet", 100));
         ingredients.add(new Ingredient(IngredientType.FILLING, "dinosaur", 200));
