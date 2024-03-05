@@ -17,7 +17,7 @@ public class BunTest {
    */
   @Before
   public void setData() {
-    bun = new Bun(Constants.WHITE_BUN, Constants.HUNDRED);
+    bun = new Bun(Constants.WHITE_BUN, Constants.FIRST_PRICE);
   }
 
   /**
@@ -41,7 +41,7 @@ public class BunTest {
    */
   @Test
   public void getPriceTest() {
-    Assert.assertEquals(Constants.HUNDRED, bun.getPrice(), 0.0);
+    Assert.assertEquals(Constants.FIRST_PRICE, bun.getPrice(), 0.0);
   }
 
   /**
@@ -57,6 +57,6 @@ public class BunTest {
    */
   @Test
   public void getWrongPriceThenFail() {
-    Assert.assertNotEquals(Constants.HUNDRED, bun.getPrice() + 1, 0.0);
+    Assert.assertNotEquals(Constants.FIRST_PRICE, bun.getPrice() + 1, 0.0);
   }
 }

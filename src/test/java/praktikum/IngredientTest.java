@@ -17,7 +17,7 @@ public class IngredientTest {
    */
   @Before
   public void setData() {
-    ingredient = new Ingredient(IngredientType.SAUCE, Constants.CHILI_SAUCE, Constants.HUNDRED);
+    ingredient = new Ingredient(IngredientType.SAUCE, Constants.CHILI_SAUCE, Constants.FIRST_PRICE);
   }
 
   /**
@@ -49,7 +49,7 @@ public class IngredientTest {
    */
   @Test
   public void getPriceTest() {
-    Assert.assertEquals(Constants.HUNDRED, ingredient.getPrice(), 0.0);
+    Assert.assertEquals(Constants.FIRST_PRICE, ingredient.getPrice(), 0.0);
   }
 
   /**
@@ -73,6 +73,6 @@ public class IngredientTest {
    */
   @Test
   public void getWrongPriceThenFail() {
-    Assert.assertNotEquals(Constants.HUNDRED, ingredient.getPrice() + 1, 0.0);
+    Assert.assertNotEquals(Constants.FIRST_PRICE, ingredient.getPrice() + 1, 0.0);
   }
 }

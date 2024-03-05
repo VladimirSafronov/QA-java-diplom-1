@@ -20,9 +20,9 @@ public class Database {
         ingredients.add(new Ingredient(IngredientType.SAUCE, Constants.SOUR_CREAM, 200));
         ingredients.add(new Ingredient(IngredientType.SAUCE, Constants.CHILI_SAUCE, 300));
 
-        ingredients.add(new Ingredient(IngredientType.FILLING, "cutlet", 100));
+        ingredients.add(new Ingredient(IngredientType.FILLING, Constants.CUTLET, 100));
         ingredients.add(new Ingredient(IngredientType.FILLING, "dinosaur", 200));
-        ingredients.add(new Ingredient(IngredientType.FILLING, "sausage", 300));
+        ingredients.add(new Ingredient(IngredientType.FILLING, Constants.SAUSAGE, 300));
     }
 
     public List<Bun> availableBuns() {
