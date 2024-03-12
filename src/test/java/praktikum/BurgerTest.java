@@ -23,12 +23,6 @@ public class BurgerTest {
   @Mock
   Database database;
 
-  @Mock
-  Bun bunMock;
-
-  @Mock
-  Ingredient ingredientMock;
-
   /**
    * Метод инициализации моковой базы данных
    */
@@ -91,16 +85,12 @@ public class BurgerTest {
 
   @Test
   public void getReceiptTest() {
-    burger.setBuns(bunMock);
-    burger.ingredients.clear();
-    burger.addIngredient(ingredientMock);
-    Mockito.when(ingredientMock.getType()).thenReturn(IngredientType.SAUCE);
-
-    burger.getReceipt();
-    Mockito.verify(bunMock, Mockito.times(2)).getName();
-    int sizeOfIngredients = ingredientsCount();
-    Mockito.verify(ingredientMock, Mockito.times(sizeOfIngredients)).getType();
-    Mockito.verify(ingredientMock, Mockito.times(sizeOfIngredients)).getName();
+    burger.setBuns(database.availableBuns().get(0));
+    Assert.assertTrue(burger.getReceipt().startsWith(String.format("(==== %s ====)", burger.bun.getName())));
+    for (int i = 0; i < burger.ingredients.size(); i++) {
+      Assert.assertTrue(burger.getReceipt().contains(burger.ingredients.get(i).name));
+    }
+    Assert.assertTrue(burger.getReceipt().contains(String.format("%nPrice: %f%n", burger.getPrice())));
   }
 
   private int ingredientsCount() {
