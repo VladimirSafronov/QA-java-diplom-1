@@ -12,17 +12,17 @@ public class Database {
     private final List<Ingredient> ingredients = new ArrayList<>();
 
     public Database() {
-        buns.add(new Bun("black bun", 100));
-        buns.add(new Bun("white bun", 200));
-        buns.add(new Bun("red bun", 300));
+        buns.add(new Bun(Constants.BLACK_BUN, 100));
+        buns.add(new Bun(Constants.WHITE_BUN, 200));
+        buns.add(new Bun(Constants.RED_BUN, 300));
 
-        ingredients.add(new Ingredient(IngredientType.SAUCE, "hot sauce", 100));
-        ingredients.add(new Ingredient(IngredientType.SAUCE, "sour cream", 200));
-        ingredients.add(new Ingredient(IngredientType.SAUCE, "chili sauce", 300));
+        ingredients.add(new Ingredient(IngredientType.SAUCE, Constants.HOT_SAUCE, 100));
+        ingredients.add(new Ingredient(IngredientType.SAUCE, Constants.SOUR_CREAM, 200));
+        ingredients.add(new Ingredient(IngredientType.SAUCE, Constants.CHILI_SAUCE, 300));
 
-        ingredients.add(new Ingredient(IngredientType.FILLING, "cutlet", 100));
+        ingredients.add(new Ingredient(IngredientType.FILLING, Constants.CUTLET, 100));
         ingredients.add(new Ingredient(IngredientType.FILLING, "dinosaur", 200));
-        ingredients.add(new Ingredient(IngredientType.FILLING, "sausage", 300));
+        ingredients.add(new Ingredient(IngredientType.FILLING, Constants.SAUSAGE, 300));
     }
 
     public List<Bun> availableBuns() {
